@@ -1,46 +1,90 @@
-# Getting Started with Create React App
+# 🌤️ Weather PWA - Прогноз погоды
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-18.2-blue)](https://reactjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue)](https://typescriptlang.org)
+[![PWA](https://img.shields.io/badge/PWA-✅-yellow)](https://web.dev/progressive-web-apps/)
+[![Responsive](https://img.shields.io/badge/Responsive-✅-green)](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+[![Open-Meteo](https://img.shields.io/badge/API-OpenMeteo-orange)](https://open-meteo.com/)
 
-## Available Scripts
+Современное PWA приложение для просмотра прогноза погоды с красивым адаптивным дизайном. Работает без API ключа, использует бесплатное Open-Meteo API.
 
-In the project directory, you can run:
+## Ключевые особенности
 
-### `npm start`
+- **Поиск городов** по всему миру
+- **Текущая погода** с детальной информацией
+- **Прогноз на 7 дней** с почасовым прогнозом на 8 часов
+- **Избранные города** - быстрый доступ к часто просматриваемым городам
+- **PWA (Progressive Web App)** - устанавливается на телефон как нативное приложение
+- **Адаптивный дизайн** - идеально на всех устройствах 
+- **Автообновление** данных 
+- **Сохранение данных** в localStorage (последний город, избранное)
+- **Стеклянный дизайн** (glass-morphism) с красивыми градиентами
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Демо
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### [Посмотреть демо на GitHub Pages](https://lina-whm.github.io/weather-pwa/)
 
-### `npm test`
+## Технологический стек
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
+- **React 18** (хуки, функциональные компоненты)
+- **TypeScript** (строгая типизация всех компонентов)
+- **PWA** (manifest.json, service worker от CRA)
+- **CSS Modules** (компонентные стили)
+- **Axios** (HTTP клиент для API запросов)
+- **LocalStorage** (сохранение избранного и последнего города)
 
-### `npm run build`
+### API
+- **Open-Meteo API** (бесплатное, без ключа)
+  - Геокодинг для поиска городов
+  - Текущая погода
+  - Почасовой прогноз
+  - Прогноз на 7 дней
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Скриншоты
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Главный экран | Прогноз погоды | Мобильная версия |
+|--------------|----------------|------------------|
+| ![Главный экран](screenshots/main.png) | ![Прогноз](screenshots/weather.png) | ![Мобильная версия](screenshots/mobile.png) |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Поиск городов | Избранное | Детальная информация |
+|--------------|-----------|---------------------|
+| ![Поиск](screenshots/search.png) | ![Избранное](screenshots/favorites.png) | ![Детали](screenshots/details.png) |
 
-### `npm run eject`
+## Демонстрация работы
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Демонстрация работы приложения](screenshots/demo.gif)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Быстрый старт
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Предварительные требования
+- Node.js 16+
+- npm или yarn
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Детальная установка
 
-## Learn More
+### Клонирование репозитория
+```bash
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+git clone https://github.com/lina-whm/weather-pwa.git
+cd weather-pwa
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm install
+# или
+yarn install
+
+npm start
+# или
+yarn start
+
+```
+Приложение откроется на http://localhost:3000
+
+```bash
+Сборка production версии
+
+npm run build
+# или
+yarn build
+
+```

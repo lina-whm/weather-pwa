@@ -1,0 +1,164 @@
+.favorites-container {
+  margin: 20px auto;
+  max-width: 800px;
+  animation: slideDown 0.5s ease;
+}
+
+.favorites-title {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding-left: 10px;
+}
+
+.favorites-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.favorite-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 12px 20px;
+  min-width: 140px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  animation: fadeIn 0.5s ease;
+}
+
+.favorite-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-card.active {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.favorite-remove {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ff4757;
+  color: white;
+  border: 2px solid white;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-weight: bold;
+}
+
+.favorite-card:hover .favorite-remove {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.favorite-remove:hover {
+  background: #ff6b81;
+  transform: scale(1.1) !important;
+}
+
+.favorite-icon {
+  font-size: 20px;
+  animation: starTwinkle 2s infinite;
+}
+
+.favorite-info {
+  flex: 1;
+}
+
+.favorite-city-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.favorite-country {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.favorite-weather-icon {
+  font-size: 24px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 600px) {
+  .favorites-grid {
+    gap: 8px;
+  }
+  
+  .favorite-card {
+    padding: 10px 15px;
+    min-width: 120px;
+  }
+  
+  .favorite-city-name {
+    font-size: 12px;
+  }
+  
+  .favorite-country {
+    font-size: 10px;
+  }
+  
+  .favorite-weather-icon {
+    font-size: 20px;
+  }
+}
