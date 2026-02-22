@@ -88,7 +88,6 @@ const SearchCity: React.FC<SearchCityProps> = ({ onCitySelect }) => {
         onChange={(e) => setQuery(e.target.value)}
         onFocus={() => query.length >= 2 && setShowResults(true)}
       />
-      
       {showResults && (
         <div className="search-results">
           {isLoading ? (
