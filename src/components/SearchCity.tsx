@@ -77,7 +77,7 @@ const SearchCity: React.FC<SearchCityProps> = ({ onCitySelect }) => {
     
     return countries[countryCode] || countryCode;
   };
-
+  
   return (
     <div className="search-container" ref={searchRef}>
       <input
