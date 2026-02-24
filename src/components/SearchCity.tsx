@@ -74,7 +74,6 @@ const SearchCity: React.FC<SearchCityProps> = ({ onCitySelect }) => {
       'UK': 'Великобритания',
       'United Kingdom': 'Великобритания'
     };
-    
     return countries[countryCode] || countryCode;
   };
   
