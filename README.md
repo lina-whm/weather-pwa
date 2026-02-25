@@ -45,11 +45,10 @@
 
 | Главный экран | Прогноз погоды | Мобильная версия |
 |--------------|----------------|------------------|
-| ![Главный экран](/public/screenshots/main.png) | ![Прогноз]((/public/screenshots/weather.png) | ![Мобильная версия]((/public/screenshots/mobile.png) |
-
+| ![Главный экран](/public/screenshots/main.png) | ![Прогноз](/public/screenshots/weather.png) | ![Мобильная версия](/public/screenshots/mobile.png) |
 | Поиск городов | Избранное |
 |--------------|-----------|---------------------|
-| ![Поиск]((/public/screenshots/search.png) | ![Избранное]((/public/screenshots/favorites.png) | 
+| ![Поиск](/public/screenshots/search.png) | ![Избранное](/public/screenshots/favorites.png) | 
 
 ## Демонстрация работы
 
